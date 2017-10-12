@@ -105,9 +105,32 @@ body, html {
 
 
 .overstudio {
-  width:100%;
-  background-color: #d7d7d7;
-  height: 150px;
+  width:100%;  
+}
+.overstudio p{
+  text-align: center;
+  font-size: 2rem;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 8px;
+}
+
+.approach ul li  {
+  margin: 0 auto;  
+  display: inline-block;
+  list-style: none;
+  width: 33%;
+}
+.approach ul li img {
+  
+  width: 100%
+}
+
+.overstudio h1 {
+  text-align: center;
+  font-size: 6rem;
+  padding: 0;
+  margin:0;
 }
 .overstudio-philosophy{
   width:100%;
