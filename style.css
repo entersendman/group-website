@@ -73,10 +73,8 @@ h2 {
 .presentation {  
   position: relative;
   width:100%;
-  height: 20vh;
+  height: 35vh;
   overflow: hidden;
-  animation-name: minimaze-height;
-  animation-duration: 9s;
 }
 
 .for-animation {
@@ -143,6 +141,13 @@ h2 {
 .who-we-are .our-team h2{
   /*font-size: 25px;*/
   font-weight: 300;
+}
+
+.who-we-are .our-team p {
+  max-width: 80%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  text-align: justify;
 }
 
 .who-we-are .our-team ul{
@@ -664,9 +669,7 @@ opacity: 0;
   border-radius: 3px;
   font-size: 3rem;
   transition: 0.2s;
-  transform: translateY(-25vh);
-  animation-name: to-up-all;
-  animation-duration: 8s;
+  transform: translateY(-15vh);
 }
 
 
