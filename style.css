@@ -26,9 +26,20 @@ h2 {
   background: #433e3b;
   color: white;
   flex-wrap: wrap;
-  padding: 15px 10px 10px 10px;
+  padding: 15px 10px 10px 20px;
   
 }
+
+.header ul li a , .header .logo a{
+  text-transform: none;
+  text-decoration: none;
+  color: #FFF;
+}
+
+.header ul li a:hover {
+  color: #d0364b;
+}
+
 .header .logo {
   padding: 16px 0px;
   letter-spacing: 0.15rem;
@@ -276,17 +287,17 @@ h2 {
   right: 0;
   opacity: 0;
   transition: .5s ease;
-  background-color: #c5c5c4;
+  background-color: #d0364b;
 }
 .overstudio .approach ul li .approach-animation .overlay .text {
-  background-color: #c5c5c4;
-  color: #1a1817 ;
+  background-color: #d0364b;
+  color: white;
   font-size: 16px;
   padding: 16px 32px;
 
 }
 .overstudio .approach ul li .approach-animation .overlay .text h3 {
-  color:#0d0c0b;
+  color: white;
   font-weight: 500;
   font-size: 3rem;
   }
@@ -418,22 +429,39 @@ h2 {
   margin: 0 auto;
   
 }
-.footer-contacts {
+.footer .footer-contacts {
   width: 10%;
   font-size:2.7rem;
 }
 
-.footer-header-repeat {
+.footer .footer-contacts ul a {
+  text-decoration: none;
+  color: white;
+}
+.footer .footer-contacts ul a:hover {
+  color: #d0364b;
+}
+.footer .footer-header-repeat {
   width: 20%;
   font-size: 2.1rem;
   height: 2.7rem;
 }
-.footer-mail {
+
+.footer .footer-header-repeat ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer .footer-header-repeat ul li a:hover {
+  color: #d0364b;
+}
+
+.footer .footer-mail {
   width: 70%;
   font-size: 2.2rem;
 }
 
-.footer-mail ul {
+.footer .footer-mail ul {
   height: 100%;
   margin:0;
   list-style:none;
@@ -443,7 +471,7 @@ h2 {
   padding:0;
 }
 
-.footer-contacts ul, .footer-header-repeat ul{
+.footer .footer-contacts ul, .footer-header-repeat ul{
   height: 100%;
   margin:0;
   list-style:none;
@@ -453,7 +481,7 @@ h2 {
   padding:0;  
 }
 
-.footer-mail p {
+.footer .footer-mail p {
  margin: 0;
 }
 
