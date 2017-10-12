@@ -204,14 +204,43 @@ body, html {
   width: 100%
 }
 
-.overstudio-philosophy{
+
+
+/****************************************/
+/* START CSS_CODE FOR PHILOSOPHY SECTION */
+/****************************************/
+
+.overstudio-philosophy-container{
   width:100%;
   background-color: #00eef4;
-  height: 150px;
+  height: 200px;
+  padding: 35px 0 35px 0;
+   text-align: center;
+  line-height: 1.2em;
+  margin-top: 20px
+}
+.overstudio-philosophy
+{
+	width:80%;
+	margin: 0 auto;
+}
+
+.overstudio-philosophy p{
+  width: 80%;
+  font-size: 1.2rem;
+  margin: 0 auto;
+}
+.overstudio-philosophy h2 {
+  font-size: 25px;
+  font-weight: 300;
 }
 
 
 
+
+/****************************************/
+/* END CSS_CODE FOR PHILOSOPHY SECTION   */
+/****************************************/
 
 /****************************************/
 /* START CSS_CODE FOR SUBSCRIBE SECTION */
