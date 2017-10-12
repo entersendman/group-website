@@ -25,4 +25,10 @@ angular.module('overstudio', ['ui.router'])
   $stateProvider.state(worksState);
   $stateProvider.state(contactState);
   $urlRouterProvider.otherwise('home');
-});
+})
+.controller('GlobalCtrl', [ '$rootScope', '$stateParams',
+function($rootScope,$stateParams) {
+  $rootScope.animate = 'sdf';
+
+  
+}]);
