@@ -10,9 +10,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- place for script tag -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
+  <script src="app.js"></script>
 
 </head>
-<body>
+<body ng-app="overstudio">
+
 
 <!-- header -->
 <header class="header">
@@ -24,7 +28,46 @@
   </ul>
 </header>
 
+<ui-view></ui-view>
 
+<!-- footer -->
+<footer class="footer">
+
+  <div class="footer-contacts">
+    <ul>
+      <li class="fa fa-facebook-square" ></li>
+      <li class="fa fa-github-square"></li>
+      <li class="fa fa-twitter-square"></li>
+    </ul>
+  </div>
+
+  <div class="footer-header-repeat">
+    <ul>
+      <li>About</li>
+      <li>Work</li>
+      <li>Contact</li>
+    </ul>
+  </div>
+
+  <div class="footer-mail">
+
+    <ul>
+    <!-- this li for email form input[type=email] and submit button -->
+    <li>
+      
+    </li>
+   
+    <li><p><span id="over">Over</span>/Studio</p></li>
+
+    <li id="copy">All Rights Reserved © 2017 Over/Studio is a Web Design Group</li>
+
+    </ul>
+  </div>
+    
+</footer> 
+
+
+<script type="text/ng-template" id="/about.html">
 <!-- container for all divs. Contant can change. -->
 <section class="container">
 
@@ -164,41 +207,33 @@
 
 </section>
 
+</script>
 
-<!-- footer -->
-<footer class="footer">
 
-  <div class="footer-contacts">
-    <ul>
-      <li class="fa fa-facebook-square" ></li>
-      <li class="fa fa-github-square"></li>
-      <li class="fa fa-twitter-square"></li>
-    </ul>
+<script type="text/ng-template" id="/contact.html">
+<!-- container for all divs. Contant can change. -->
+
+  <div class="subscribeToOverStudio">
+    <div class="subscribe">
+    <h1>Request a Proposal</h1>
+  <h2>Fill Out Our Form & We’ll be in Touch Shortly</h2>
+
+    <form>
+      <input type="text" placeholder="Name*">
+      <input type="email" placeholder="Email*"> <br>
+      <input type="text" placeholder="Phone*">
+      <input type="email" placeholder="Location*"> <br>
+      <input type="text" placeholder="Company*">
+      <input type="email" placeholder="Type of Project*"> <br>
+      <textarea placeholder="Project Details*"></textarea> <br>
+      <button>Submit</button>
+    </form>
+    </div>
   </div>
 
-  <div class="footer-header-repeat">
-    <ul>
-      <li>About</li>
-      <li>Work</li>
-      <li>Contact</li>
-    </ul>
-  </div>
+</section>
 
-  <div class="footer-mail">
+</script>
 
-    <ul>
-    <!-- this li for email form input[type=email] and submit button -->
-    <li>
-      
-    </li>
-   
-    <li><p><span id="over">Over</span>/Studio</p></li>
-
-    <li id="copy">All Rights Reserved © 2017 Over/Studio is a Web Design Group</li>
-
-    </ul>
-  </div>
-    
-</footer> 
 </body>
 </html>
