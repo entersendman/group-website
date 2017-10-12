@@ -1,0 +1,145 @@
+
+<!-- Please comment your changes -->
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Over/Studio</title>
+
+  <!-- place for link tag -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- place for script tag -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
+  <script src="app.js"></script>
+
+</head>
+<body ng-app="overstudio">
+
+
+<!-- header -->
+<header class="header">
+  <div class="logo"><span id="over">Over</span>/Studio</div>
+  <ul>
+    <li class = "header-element">About</li>
+    <li class = "header-element">Work</li>
+    <li class = "header-element">Contact</li>
+  </ul>
+</header>
+
+<ui-view></ui-view>
+
+<!-- footer -->
+<footer class="footer">
+
+  <div class="footer-contacts">
+    <ul>
+      <li class="fa fa-facebook-square" ></li>
+      <li class="fa fa-github-square"></li>
+      <li class="fa fa-twitter-square"></li>
+    </ul>
+  </div>
+
+  <div class="footer-header-repeat">
+    <ul>
+      <li>About</li>
+      <li>Work</li>
+      <li>Contact</li>
+    </ul>
+  </div>
+
+  <div class="footer-mail">
+
+    <ul>
+    <!-- this li for email form input[type=email] and submit button -->
+    <li>
+      
+    </li>
+   
+    <li><p><span id="over">Over</span>/Studio</p></li>
+
+    <li id="copy">All Rights Reserved © 2017 Over/Studio is a Web Design Group</li>
+
+    </ul>
+  </div>
+    
+</footer> 
+
+
+<script type="text/ng-template" id="/about.html">
+<!-- container for all divs. Contant can change. -->
+<section class="container">
+    <div class="works-container">
+   <div class = "works"> 
+    <h2>WORKS</h2>
+    <p>What we have been up to.</p>
+   
+               
+    <ul><li><div class="works-animation">
+      <img src="img/strategy.jpg">
+      <div class="overlay">
+          <div class="text"><h3>Strategy </h3><br>
+           We provide websites by original design and mobiles apps which would be convenient in usage. Our team always combine the latest brands with marketing strategies and modern tendencies
+          </div>
+        </div>
+    </div></li>   
+    <li>
+      <div class="works-animation">
+        <img src="img/creative.jpg">
+        <div class="overlay">
+          <div class="text"><h3>Creative</h3> <br>
+                Seeing art in design of forms, buttons and blocks at pages, shows our skill. Taking inspiration in different areas, everyone of us providing vision of futuristic design. 
+          </div>
+        </div>
+      </div>
+    </li>     
+    <li><div class="works-animation">
+      <img src="img/Technology.jpg">
+      <div class="overlay">
+          <div class="text"><h3>Technology</h3> <br>
+            Awesome look does not mean usability, relability and performance. We provide the whole spectrum of needs to make all working good all time.
+          </div>
+        </div>
+    </div>
+  </li>
+</ul> 
+    </div>        
+  </div>
+</div>
+
+
+
+</section>
+
+</script>
+
+
+<script type="text/ng-template" id="/contact.html">
+<!-- container for all divs. Contant can change. -->
+
+  <div class="subscribeToOverStudio">
+    <div class="subscribe">
+    <h1>Request a Proposal</h1>
+  <h2>Fill Out Our Form & We’ll be in Touch Shortly</h2>
+
+    <form>
+      <input type="text" placeholder="Name*">
+      <input type="email" placeholder="Email*"> <br>
+      <input type="text" placeholder="Phone*">
+      <input type="email" placeholder="Location*"> <br>
+      <input type="text" placeholder="Company*">
+      <input type="email" placeholder="Type of Project*"> <br>
+      <textarea placeholder="Project Details*"></textarea> <br>
+      <button>Submit</button>
+    </form>
+    </div>
+  </div>
+
+</section>
+
+</script>
+
+</body>
+</html>

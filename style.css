@@ -669,5 +669,92 @@ opacity: 0;
   animation-duration: 8s;
 }
 
+/*****************************************/
+/* START CSS_CODE FOR WORKS */
+/*****************************************/
+.works-container {
+  width:100%;  
+  background-color: #fff;
+  color: #fff;
+  text-align: center;
+}
+
+.works-container .works {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.works-container .works h2 {
+  font-size: 25px;
+  font-weight: 500;
+  color:black;
+}
+
+.works-container .works p{
+  width: 80%;
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 0 auto;
+  color:black;
+
+}
+
+.works-container .works ul {
+  padding: 0;
+}
+
+.works-container .works ul li  {
+  margin: 0 auto;  
+  display: inline-block;
+  list-style: none;
+  padding:8px;
+  width: 31%;
+}
+.works-container .works ul li img {
+  height: 100%;
+  width: 100%;
+}
+.works-container .works ul li .works-animation {
+  position: relative;
+}
+.works-container .works ul li .works-animation img {
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+.works-container .works ul li .works-animation .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #d0364b;
+}
+.works-container .works ul li .works-animation .overlay .text {
+  background-color: #d0364b;
+  color: #1a1817 ;
+  font-size: 16px;
+  padding: 16px 32px;
+
+}
+.works-container .works ul li .works-animation .overlay .text h3 {
+  color:#0d0c0b;
+  font-weight: 500;
+  font-size: 3rem;
+  }
+.works-container .works ul li .works-animation:hover .overlay {
+  opacity: 0.9;
+}
+
+
+
+
+
+/*****************************************/
+/* END CSS_CODE FOR WORKS */
+/*****************************************/
+
 
 
