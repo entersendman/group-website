@@ -2,6 +2,14 @@ body, html {
   margin:0;
   padding:0;
 }
+
+/*  _   _                _            */
+/* | | | |              | |           */
+/* | |_| | ___  __ _  __| | ___ _ __  */
+/* |  _  |/ _ \/ _` |/ _` |/ _ \ '__| */
+/* | | | |  __/ (_| | (_| |  __/ |    */
+/* \_| |_/\___|\__,_|\__,_|\___|_|    */
+
 .header {
   display: flex;
   justify-content: flex-end;
@@ -16,10 +24,17 @@ body, html {
   display: inline-flex;
   padding-right: 50px;
 }
+
+
+/*  _____             _        _                  */
+/* /  __ \           | |      (_)                 */
+/* | /  \/ ___  _ __ | |_ __ _ _ _ __   ___ _ __  */
+/* | |    / _ \| '_ \| __/ _` | | '_ \ / _ \ '__| */
+/* | \__/\ (_) | | | | || (_| | | | | |  __/ |    */
+/*  \____/\___/|_| |_|\__\__,_|_|_| |_|\___|_|    */
+
 .container {
-display: flex;
-    
-  background-color:red;
+  display: flex;
   flex-direction: column;
 }
 .first-block {
@@ -32,11 +47,51 @@ display: flex;
   background-color: orange;
   height: 150px;
 }
+
+/************************************/
+/* START CSS_CODE FOR ICONs SECTION */
+/************************************/
 .block-icons{
   width:100%;
-  background-color: #000;
-  height: 150px;
+  padding: 20px 0 30px;
 }
+
+.block-icons .icons {
+  text-align: center;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.block-icons .icons h2 {
+  font-size: 25px;
+  font-weight: 300;
+}
+
+.block-icons .icons ul {
+  margin: 0;
+  padding: 0;
+}
+
+.block-icons .icons ul li {
+  display: inline-block;
+  width: 24%;
+}
+
+.block-icons .icons ul li img {
+  width: 50%;
+}
+
+.block-icons .icons ul li .icon-desc {
+  font-weight: 700;
+}
+
+/**********************************/
+/* END CSS_CODE FOR ICONs SECTION */
+/**********************************/
+
+
+
+
 .overstudio {
   width:100%;
   background-color: #d7d7d7;
@@ -47,27 +102,95 @@ display: flex;
   background-color: #00eef4;
   height: 150px;
 }
+
+
+
+
+/****************************************/
+/* START CSS_CODE FOR SUBSCRIBE SECTION */
+/****************************************/
+
 .subscribeToOverStudio{
   width:100%;
-  background-color: #f400de;
-  height: 150px;
+  padding: 20px 0 30px;
 }
+
+.subscribeToOverStudio .subscribe {
+  max-width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.subscribeToOverStudio .subscribe h2 {
+  font-size: 25px;
+  font-weight: 300;
+}
+
+.subscribeToOverStudio  .subscribe button {
+  font-size: 18px;
+  padding: 9px 8px 8px;
+  color: #b20000;
+  font-weight: 700;
+  cursor: pointer;
+  border: 2px solid #b20000;
+  background: none;
+  transition: 0.4s;
+}
+.subscribeToOverStudio .subscribe button:hover {
+  color: white;
+  background: #b20000;
+}
+
+.subscribeToOverStudio .subscribe input[type=text],.subscribe input[type=email] {
+  font-size: 15px;
+  padding: 12px 11px 8px;
+  color: #b20000;
+  font-weight: 700;
+  border: 2px solid #b20000;
+  background: none;
+  
+  outline: none;
+}
+
+.subscribeToOverStudio .subscribe input[type=text] { 
+  width: 100px;
+}
+
+.subscribeToOverStudio .subscribe input[type=email] { 
+  width: 200px;
+}
+
+/****************************************/
+/* END CSS_CODE FOR SUBSCRIBE SECTION   */
+/****************************************/
+
+
+
+/* ______          _             */
+/* |  ___|        | |            */
+/* | |_ ___   ___ | |_ ___ _ __  */
+/* |  _/ _ \ / _ \| __/ _ \ '__| */
+/* | || (_) | (_) | ||  __/ |    */
+/* \_| \___/ \___/ \__\___|_|    */
+
 .footer {
   display: flex;  
-  padding:30px 0px 15px 0px;
-  max-width:80%;
+  padding:30px 10% 15px 10%;
+  max-width:100%;
+  color: white;
+  background: black;
   margin: 0 auto;
   
 }
 .footer-contacts {
-  width: 5%;
+  width: 10%;
   font-size:2.7rem;
 }
 
 .footer-header-repeat {
-  width: 25%;
-  font-size: 2.5rem;
-  font-weight: 300;
+  width: 20%;
+  font-size: 2.1rem;
+  height: 2.7rem;
 }
 .footer-mail {
   width: 70%;
@@ -84,9 +207,6 @@ display: flex;
   padding:0;
 }
 
-.footer-contacts , .footer-header-repeat , .footer-mail {
-
-}
 .footer-contacts ul, .footer-header-repeat ul{
   height: 100%;
   margin:0;
@@ -102,7 +222,7 @@ display: flex;
 }
 
 .footer-mail p span {
- color: red;
+ color: #b20000;
 }
 
 
