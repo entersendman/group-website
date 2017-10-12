@@ -338,17 +338,23 @@ body, html {
   border-top: 2px solid #d0364b;
   width:100%;
   padding: 20px 0 30px;
+
 }
 
 .subscribeToOverStudio .subscribe {
   max-width: 80%;
   margin: 0 auto;
   text-align: center;
+
 }
 
 .subscribeToOverStudio .subscribe h2 {
   font-size: 25px;
   font-weight: 300;
+}
+.subscribe textarea {
+  width: 533px;
+  height: 150px;
 }
 
 .subscribeToOverStudio  .subscribe button {
@@ -360,29 +366,31 @@ body, html {
   border: 2px solid #d0364b;
   background: none;
   transition: 0.4s;
+  width: 559px;
 }
 .subscribeToOverStudio .subscribe button:hover {
   color: white;
   background: #d0364b;
 }
 
-.subscribeToOverStudio .subscribe input[type=text],.subscribe input[type=email] {
+.subscribeToOverStudio .subscribe input[type=text],.subscribe textarea,.subscribe input[type=email] {
+  font-family: 'Raleway', sans-serif;
   font-size: 15px;
-  padding: 12px 11px 8px;
+  padding: 12px 11px 15px;
   color: #d0364b;
   font-weight: 700;
   border: 2px solid #d0364b;
   background: none;
-  
+  margin-bottom:10px;
   outline: none;
 }
-
 .subscribeToOverStudio .subscribe input[type=text] { 
-  width: 100px;
+  width: 200px;
 }
 
+
 .subscribeToOverStudio .subscribe input[type=email] { 
-  width: 200px;
+  width: 300px;
 }
 
 /****************************************/
