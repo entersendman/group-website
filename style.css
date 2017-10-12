@@ -404,7 +404,7 @@ h2 {
   outline: none;
 }
 #subscribe-page-1 {
-  border: 2px solid #d0364b;
+  border-top: 2px solid #d0364b;
 }
 .subscribeToOverStudio .subscribe input[type=text] { 
   width: 200px;
