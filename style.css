@@ -168,34 +168,42 @@ body, html {
 .overstudio {
   width:100%;  
   background-color: #3C3735;
-}
-.overstudio p{
-  text-align: center;
-  font-size: 2rem;
-  width: 80%;
-  margin: 0 auto;
-  padding-top: 8px;
   color: #fff;
+  text-align: center;
 }
 
-.approach ul li  {
+.overstudio .approach {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.overstudio .approach h2 {
+  font-size: 25px;
+  font-weight: 300;
+}
+
+.overstudio .approach p{
+  width: 80%;
+  font-size: 1.2rem;
+  margin: 0 auto;
+}
+
+.overstudio .approach ul {
+  padding: 0;
+}
+
+.overstudio .approach ul li  {
   margin: 0 auto;  
   display: inline-block;
   list-style: none;
   padding:8px;
   width: 31%;
 }
-.approach ul li img {
+.overstudio .approach ul li img {
   
   width: 100%
 }
 
-.overstudio h1 {
-  text-align: center;
-  font-size: 6rem;
-  padding: 0;
-  margin:0;
-}
 .overstudio-philosophy{
   width:100%;
   background-color: #00eef4;
