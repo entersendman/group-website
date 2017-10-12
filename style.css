@@ -693,10 +693,10 @@ opacity: 0;
 
 .works-container .works ul li  {
   margin: 0 auto;  
-  display: inline-block;
+ 
   list-style: none;
   padding:8px;
-  width: 31%;
+  width: 80%;
 }
 .works-container .works ul li img {
   height: 100%;
@@ -718,17 +718,17 @@ opacity: 0;
   right: 0;
   opacity: 0;
   transition: .5s ease;
-  background-color: #d0364b;
+  background-color: #443e3c;
 }
 .works-container .works ul li .works-animation .overlay .text {
-  background-color: #d0364b;
-  color: #1a1817 ;
+  background-color: #443e3c;
+  color: #fff ;
   font-size: 16px;
   padding: 16px 32px;
 
 }
 .works-container .works ul li .works-animation .overlay .text h3 {
-  color:#0d0c0b;
+  color: #cf364b;
   font-weight: 500;
   font-size: 3rem;
   }
