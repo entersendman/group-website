@@ -191,6 +191,14 @@ h2 {
   width: 100%;
   display: block;
 }
+@media only screen and (max-width:900px) {
+  .who-we-are .our-team ul li {
+  
+  display:block;
+  width: 100%;
+  text-align: center;
+}
+}
 /***************************************/
 /* END CSS_CODE FOR WHO-WE-ARE SECTION */
 /***************************************/
@@ -318,6 +326,14 @@ h2 {
   }
 .overstudio .approach ul li .approach-animation:hover .overlay {
   opacity: 0.9;
+}
+@media only screen and (max-width: 900px) {
+  .overstudio .approach ul li  {
+   
+  display:block;
+  width: 100%;
+  }
+  
 }
 
 
@@ -487,6 +503,7 @@ width: 90.5%;
 .contact-container input[type=email] { 
   width: 55%;
 }
+
 
 /****************************************/
 /* END CSS_CODE FOR SUBSCRIBE SECTION   */
