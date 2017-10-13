@@ -186,9 +186,9 @@
   <div class="subscribeToOverStudio" id="subscribe-page-1">
     <div class="subscribe">
     <h2>Subscribe to our newsletter</h2>
-    <form>
-      <input type="text" placeholder="Name*">
-      <input type="email" placeholder="Email*">
+    <form ng-controller="test">
+      <input ng-model="subscriber-name" type="text" placeholder="Name*">
+      <input ng-model="subscriber-email" type="email" placeholder="Email*">
       <button>Subscribe</button>
     </form>
     </div>

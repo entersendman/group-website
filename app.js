@@ -25,4 +25,10 @@ angular.module('overstudio', ['ui.router'])
   $stateProvider.state(worksState);
   $stateProvider.state(contactState);
   $urlRouterProvider.otherwise('/');
-});
+})
+
+.controller('test', ['$scope', function($scope) {
+     $scope.subscriber-name = '1';
+$scope.subscriber-email = '1';
+   }]);
+
