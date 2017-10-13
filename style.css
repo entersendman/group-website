@@ -210,6 +210,7 @@ h2 {
 .who-we-are .our-team p {
   max-width: 80%;
   margin: 0 auto;
+  font-size: 1.2rem;
   margin-bottom: 30px;
   text-align: justify;
 }
@@ -286,6 +287,12 @@ h2 {
   font-size: 25px;
   font-weight: 300;
 }
+.block-icons .icons p{
+  font-size: 1.2rem;
+  width: 80%;
+  margin: 0 auto;
+}
+
 
 .block-icons .icons ul {
   margin: 0;
@@ -311,6 +318,9 @@ h2 {
   width: 80%;
   padding: 10px;
   margin: 0 auto;
+}
+.block-icons .icons p{
+  width: 100%;
 }
 }
 
