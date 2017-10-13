@@ -443,6 +443,12 @@ h2 {
 .subscribeToOverStudio .subscribe input[type=email] { 
   width: 55%;
 }
+#text-location {
+  width: 55%;
+}
+#text-type-of {
+  width: 55%;
+}
 .contact-container {  
   width:80%;  
   margin: 0 auto 20px;
@@ -483,7 +489,7 @@ width: 90.5%;
   background: #d0364b;
 }
 
-.contact-container input[type=text],textarea, input[type=email]{
+.contact-container input[type=text],textarea, input[type=email],#text-location,#text-type-of  {
   font-family: 'Raleway', sans-serif;
   font-size: 15px;
   padding: 12px 11px 15px;
@@ -789,8 +795,8 @@ opacity: 0;
   width: 80%;
 }
 .works-container .works ul li img {
-  height: 100%;
-  width: 100%;
+  height: 80%;
+  width: 80%;
 }
 .works-container .works ul li .works-animation {
   position: relative;
@@ -799,6 +805,7 @@ opacity: 0;
     opacity: 1;
     transition: .5s ease;
     backface-visibility: hidden;
+
 }
 .works-container .works ul li .works-animation .overlay {
   position: absolute;
@@ -809,6 +816,8 @@ opacity: 0;
   opacity: 0;
   transition: .5s ease;
   background-color: #443e3c;
+  width: 80%;
+  margin: 0 auto;
 }
 .works-container .works ul li .works-animation .overlay .text {
   background-color: #443e3c;
