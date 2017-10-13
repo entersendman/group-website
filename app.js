@@ -25,8 +25,4 @@ angular.module('overstudio', ['ui.router'])
   $stateProvider.state(worksState);
   $stateProvider.state(contactState);
   $urlRouterProvider.otherwise('/');
-})
-.controller('GlobalCtrl', [ '$rootScope', '$stateParams',
-function($rootScope,$stateParams) {
-  
-}]);
+});

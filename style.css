@@ -31,13 +31,24 @@ h2 {
 /* \_| |_/\___|\__,_|\__,_|\___|_|    */
 
 .header {
+  overflow: hidden;
+  z-index: 100;
   display: flex;
   justify-content: space-between;
   background: #433e3b;
+  top: 0;
   color: white;
   flex-wrap: wrap;
   padding: 15px 10px 10px 20px;
-  
+  width: 100%;
+  position: fixed;
+  transition: max-height 1s;
+  transition-duration: 0.2s;
+}
+
+.nav-up {
+    max-height: 0px;
+    background-color: white;
 }
 
 .header ul li a , .header .logo a{
@@ -73,6 +84,7 @@ h2 {
 
 .container {
   display: flex;
+  position: relative;
   flex-direction: column;
 }
 
@@ -881,6 +893,3 @@ opacity: 0;
 /*****************************************/
 /* END CSS_CODE FOR WORKS */
 /*****************************************/
-
-
-
