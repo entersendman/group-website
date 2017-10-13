@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html >
 <head>
-  <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <title>Over/Studio</title>
@@ -186,11 +186,14 @@
   <div class="subscribeToOverStudio" id="subscribe-page-1">
     <div class="subscribe">
     <h2>Subscribe to our newsletter</h2>
-    <form ng-controller="test">
-      <input ng-model="subscriber-name" type="text" placeholder="Name*">
-      <input ng-model="subscriber-email" type="email" placeholder="Email*">
-      <button>Subscribe</button>
+    <form>
+      <input ng-model="subscriberName" type="text" placeholder="Name*">
+      <input ng-model="subscriberEmail" type="email" placeholder="Email*">
+      <button ng-click="subscribe()">Subscribe</button>
     </form>
+	<input type="text" ng-model="myWelcome">
+		
+	</div>
     </div>
   </div>
 

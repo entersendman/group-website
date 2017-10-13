@@ -1,0 +1,11 @@
+http://0.0.0.0:8000/cgi-bin/form.py
+volodya.ternopil1997@gmail.com
+kafedra407++
+overstudiogroup@gmail.com
+headers: {
+		"Access-Control-Allow-Headers": "Content-Type",
+		"Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+		"Access-Control-Allow-Origin": "*",
+		"Accept":  "*/*",
+		"Content-Type": "application/json"	
+	    },

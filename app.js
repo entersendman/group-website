@@ -27,8 +27,23 @@ angular.module('overstudio', ['ui.router'])
   $urlRouterProvider.otherwise('/');
 })
 
-.controller('test', ['$scope', function($scope) {
-     $scope.subscriber-name = '1';
-$scope.subscriber-email = '1';
-   }]);
+.controller('MainCtrl', ['$scope', function($scope) {
+     $scope.subscriberName ;
+$scope.subscriberEmail ;
+$scope.subscribe = function() {
+
+$scope.data = {name:$scope.subscriberName, email: $scope.subscriberEmail};
+
+$.ajax({
+	url: "http://0.0.0.0:8000/cgi-bin/form.py",
+	type: "post",
+	datatype:"json",
+	data: $scope.data,
+	success: function(response){
+	    alert(response.message);
+	    alert(response.keys);
+	}
+});
+}
+}]);
 
