@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700');
 
+* {
+  -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
 body, html {
   margin:0;
   padding:0;
@@ -359,9 +365,9 @@ h2 {
 
 .subscribeToOverStudio{
   
-  width:100%;
+  
   padding: 20px 0 30px;
-
+  
 }
 
 .subscribeToOverStudio .subscribe {
@@ -371,14 +377,17 @@ h2 {
 
 }
 
+.subscribeToOverStudio .subscribe form {
+  max-width: 80%;
+  margin: 0 auto;
+  text-align: center;
+
+}
 .subscribeToOverStudio .subscribe h2 {
   font-size: 25px;
   font-weight: 300;
 }
-.subscribe textarea {
-  width: 533px;
-  height: 150px;
-}
+
 
 .subscribeToOverStudio  .subscribe button {
   font-size: 18px;
@@ -389,7 +398,7 @@ h2 {
   border: 2px solid #d0364b;
   background: none;
   transition: 0.4s;
-  width: 559px;
+  width: 90%;
 }
 .subscribeToOverStudio .subscribe button:hover {
   color: white;
@@ -411,12 +420,72 @@ h2 {
   border-top: 2px solid #d0364b;
 }
 .subscribeToOverStudio .subscribe input[type=text] { 
-  width: 200px;
+  width: 35%;
 }
 
 
 .subscribeToOverStudio .subscribe input[type=email] { 
-  width: 300px;
+  width: 55%;
+}
+.contact-container {  
+  width:80%;  
+  margin: 0 auto 20px;
+  text-align: center;
+}
+.contact-container form {  
+  width:80%;  
+  margin: 0 auto;
+}
+.contact-container  textarea {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+width: 90.5%;
+}
+.contact-container  h2 {
+  font-size: 25px;
+  font-weight: 300;
+  text-align: center;
+}
+.contact-container  h1 {  
+  text-align: center;
+}
+.contact-container button {
+  font-size: 15px;
+  padding: 12px 11px 15px;
+  color: #d0364b;
+  font-weight: 700;
+  cursor: pointer;
+  border: 2px solid #d0364b;
+  background: none;
+  transition: 0.4s;
+  margin: 0 auto;
+  width: 90.5%;
+}
+.contact-container  button:hover {
+  color: white;
+  background: #d0364b;
+}
+
+.contact-container input[type=text],textarea, input[type=email]{
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  padding: 12px 11px 15px;
+  color: #d0364b;
+  font-weight: 700;
+  border: 2px solid #d0364b;
+  background: none;
+  margin:0 auto 10px;
+  outline: none;
+}
+#subscribe-page-1 {
+  border-top: 2px solid #d0364b;
+}
+.contact-container input[type=text] { 
+  width: 35%;
+}
+.contact-container input[type=email] { 
+  width: 55%;
 }
 
 /****************************************/
