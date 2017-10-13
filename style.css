@@ -127,6 +127,33 @@ h2 {
   display: block;
 }
 
+
+@media only screen and (max-width:900px) {
+  .presentation .outer .middle .inner-adaptive {
+    display: block;
+  }
+  #studio {
+  letter-spacing: 0.6rem;
+  transform: translateY(300%);
+  animation-name: none;
+}
+#html-animation {
+  display: none;
+  animation-name: none;
+}
+
+#css {
+  display: none;
+  animation-name: none;
+}
+#javascript {
+  display: none;
+  animation: none;
+}
+.inner {
+  display: none;
+}
+}
 /*****************************************/
 /* END CSS_CODE FOR PRESENTATION SECTION */
 /*****************************************/
@@ -337,18 +364,22 @@ h2 {
   background-color: #d0364b;
   color: white;
   font-size: 16px;
-  padding: 16px 32px;
+  padding: 16px 10px;
 
 }
 .overstudio .approach ul li .approach-animation .overlay .text h3 {
   color: white;
   font-weight: 500;
-  font-size: 3rem;
+  margin: 1rem;
+  font-size: 2.5rem;
   }
+.overstudio .approach ul li .approach-animation .overlay .text p {
+  font-size: 1rem;
+}
 .overstudio .approach ul li .approach-animation:hover .overlay {
   opacity: 0.9;
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 720px) {
   .overstudio .approach ul li  {
    
   display:block;
@@ -358,9 +389,18 @@ h2 {
   .overstudio .approach {
   max-width: 100%;
 }
+.overstudio .approach ul li .approach-animation .overlay .text h3 {
+  margin-top: 4rem;
 }
-
-
+}
+@media only screen and (max-width: 900px) {
+.overstudio .approach ul li .approach-animation .overlay .text p{
+display: none;
+}
+.overstudio .approach ul li .approach-animation .overlay .text h3 {
+  font-size: 1.8rem;
+}
+}
 
 /****************************************/
 /* START CSS_CODE FOR PHILOSOPHY SECTION */
@@ -804,6 +844,17 @@ opacity: 0;
   transform: translateY(-15vh);
 }
 
+.inner-adaptive {
+  display: none;
+  margin:  auto;
+  position: relative;
+  max-width: 800px;
+  text-align: center;
+  padding: 10px 20px 50px 20px;
+  font-size: 3rem;
+  transition: 0.2s;
+}
+
 /*****************************************/
 /* START CSS_CODE FOR WORKS */
 /*****************************************/
@@ -817,6 +868,10 @@ opacity: 0;
 .works-container .works {
   max-width: 80%;
   margin: 0 auto;
+}
+.works-container .works h1 {
+  font-weight: 700;
+  color:black;
 }
 
 .works-container .works h2 {
@@ -872,22 +927,39 @@ opacity: 0;
 }
 .works-container .works ul li .works-animation .overlay .text {
   background-color: #443e3c;
-  color: #fff ;
   font-size: 16px;
   padding: 16px 32px;
-
 }
 .works-container .works ul li .works-animation .overlay .text h3 {
   color: #cf364b;
   font-weight: 500;
-  font-size: 3rem;
+  font-size: 2.5rem;
   }
+.works-container .works ul li .works-animation .overlay .text p {
+  color: white;
+}
 .works-container .works ul li .works-animation:hover .overlay {
   opacity: 0.9;
 }
 
+@media only screen and (max-width:800px) {
+  .works-container .works ul li  {
+  width: 100%;
+}
+.works-container .works ul li .works-animation .overlay {
+  width: 100%;
+}
+.works-container .works ul li .works-animation .overlay .text p {
+  display: none;
+}
+}
 
-
+@media only screen and (max-width:480px) {
+.works-container .works ul li img {
+  height: 100%;
+  width: 100%;
+}
+}
 
 
 /*****************************************/
