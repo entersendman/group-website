@@ -83,6 +83,12 @@ h2 {
   }
 }
 
+@media only screen and (max-width:420px) {
+  .header-element {
+    padding-right: 20px;
+  }
+}
+
 
 /*  _____             _        _                  */
 /* /  __ \           | |      (_)                 */
@@ -184,7 +190,7 @@ h2 {
 
 .who-we-are {
   width:100%;
-  background-color: #3c3735;
+  background-color: #433e3b;
   color: white;
   padding: 20px 0 30px;
 }
