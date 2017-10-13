@@ -63,6 +63,15 @@ h2 {
   padding-right: 50px;
 }
 
+@media only screen and (max-width:900px) {
+  .header {
+    flex-direction: column;
+  }
+  .header ul {
+    padding: 0;
+  }
+}
+
 
 /*  _____             _        _                  */
 /* /  __ \           | |      (_)                 */
@@ -464,6 +473,9 @@ h2 {
 @media only screen and (max-width:480px)  {
   .subscribeToOverStudio .subscribe input[type=text], .subscribeToOverStudio .subscribe input[type=email], .subscribeToOverStudio  .subscribe button { 
   width: 100%;
+}
+.subscribeToOverStudio .subscribe form{
+  max-width: 100%;
 }
 }
 
