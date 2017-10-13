@@ -192,11 +192,14 @@ h2 {
   display: block;
 }
 @media only screen and (max-width:900px) {
-  .who-we-are .our-team ul li {
-  
+  .who-we-are .our-team ul li.adaptive-for {
   display:block;
   width: 100%;
+  margin-bottom: 30px;
   text-align: center;
+}
+.who-we-are .our-team {
+  max-width: 100%;
 }
 }
 /***************************************/
@@ -246,6 +249,15 @@ h2 {
 
 .block-icons .icons ul li .icon-desc {
   font-weight: 700;
+}
+
+@media only screen and (max-width:480px) {
+  .block-icons .icons ul li {
+  display: inline-block;
+  width: 80%;
+  padding: 10px;
+  margin: 0 auto;
+}
 }
 
 /**********************************/
@@ -331,9 +343,12 @@ h2 {
   .overstudio .approach ul li  {
    
   display:block;
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
   }
-  
+  .overstudio .approach {
+  max-width: 100%;
+}
 }
 
 
@@ -367,10 +382,12 @@ h2 {
   font-weight: 300;
 }
 
-
-
-
-
+@media only screen and (max-width: 480px) {
+.overstudio-philosophy {
+  width:100%;
+  margin: 0 auto;
+}
+}
 /****************************************/
 /* END CSS_CODE FOR PHILOSOPHY SECTION   */
 /****************************************/
@@ -443,12 +460,33 @@ h2 {
 .subscribeToOverStudio .subscribe input[type=email] { 
   width: 55%;
 }
+
 #text-location {
   width: 55%;
 }
 #text-type-of {
   width: 55%;
 }
+
+
+@media only screen and (max-width:480px)  {
+   #text-location,  #text-type-of, .subscribeToOverStudio .subscribe input[type=text], .subscribeToOverStudio .subscribe input[type=email], .subscribeToOverStudio  .subscribe button { 
+  width: 100%;
+}
+}
+
+/****************************************/
+/* END CSS_CODE FOR SUBSCRIBE SECTION   */
+/****************************************/
+
+
+
+
+
+
+
+
+
 .contact-container {  
   width:80%;  
   margin: 0 auto 20px;
@@ -510,10 +548,11 @@ width: 90.5%;
   width: 55%;
 }
 
-
-/****************************************/
-/* END CSS_CODE FOR SUBSCRIBE SECTION   */
-/****************************************/
+@media only screen and (max-width:480px) {
+  .contact-container input[type=text],.contact-container input[type=email], .contact-container  textarea, .contact-container  button {
+    width: 100%;
+  }
+}
 
 
 
