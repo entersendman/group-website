@@ -287,12 +287,15 @@ h2 {
   font-weight: 700;
 }
 
-@media only screen and (max-width:480px) {
+@media only screen and (max-width:720px) {
   .block-icons .icons ul li {
   display: inline-block;
   width: 80%;
   padding: 10px;
   margin: 0 auto;
+}
+.block-icons .icons ul li img {
+  width: 30%;
 }
 }
 
