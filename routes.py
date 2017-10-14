@@ -10,15 +10,12 @@ app.secret_key = 'development key'
 
 #mail.init_app(app)
 
-@app.route('/')
+@app.route('/dfsd')
 def home():
   return render_template('index.html')
 
-@app.route('/about')
-def about():
-  return render_template('about.html')
 
-@app.route('/contact', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def contact():
   form = ContactForm()
 

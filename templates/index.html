@@ -17,6 +17,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
   <script src="/static/js/app.js"></script>
 
+
 </head>
 <body ng-app="overstudio">
 
@@ -186,12 +187,10 @@
   <div class="subscribeToOverStudio" id="subscribe-page-1">
     <div class="subscribe">
     <h2>Subscribe to our newsletter</h2>
-    <form>
-      <input ng-model="subscriberName" type="text" placeholder="Name*">
-      <input ng-model="subscriberEmail" type="email" placeholder="Email*">
-      <button ng-click="subscribe()">Subscribe</button>
-    </form>
-	<input type="text" ng-model="myWelcome">
+     {% block content %}
+      {% endblock %}
+
+	
 		
 	</div>
     </div>
@@ -264,6 +263,9 @@
     </div>        
   </div>
 </div>
+
+     
+
 </section>
 </script>
 
