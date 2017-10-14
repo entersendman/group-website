@@ -24,7 +24,8 @@ def contact():
       flash('All fields are required.')
       return render_template('contact.html', form=form)
     else:
-      sendModule.sendMail("volodya.ternopil1997@gmail.com","zatrimka")
+
+      sendModule.sendMail(form.email.data,form.name.data)
 
       return render_template('contact.html', success=True)
 
