@@ -28,20 +28,20 @@ angular.module('overstudio', ['ui.router'])
 })
 
 .controller('MainCtrl', ['$scope', function($scope) {
-     $scope.subscriberName ;
-$scope.subscriberEmail ;
+
+$scope.subscriberName;
+$scope.subscriberEmail;
 $scope.subscribe = function() {
 
-$scope.data = {name:$scope.subscriberName, email: $scope.subscriberEmail};
+$scope.data = {name:$scope.subscriberName, to: $scope.subscriberEmail};
 
 $.ajax({
-	url: "http://0.0.0.0:8000/cgi-bin/form.py",
+	url: "/subscribeUser",
 	type: "post",
 	datatype:"json",
 	data: $scope.data,
 	success: function(response){
-	    alert(response.message);
-	    alert(response.keys);
+	    console.log(response);
 	}
 });
 }

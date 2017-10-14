@@ -1,5 +1,4 @@
-from flask import Flask, render_template, request, flash
-from forms import ContactForm
+from flask import Flask, render_template, request, flash, json
 
 import sendModule
 #mail = Mail()
@@ -10,27 +9,20 @@ app.secret_key = 'development key'
 
 #mail.init_app(app)
 
-@app.route('/dfsd')
+@app.route('/')
 def home():
   return render_template('index.html')
 
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/subscribeUser', methods=['POST'])
+
 def contact():
-  form = ContactForm()
+  to =  request.form['to']
+  name = request.form['name']
 
-  if request.method == 'POST':
-    if form.validate() == False:
-      flash('All fields are required.')
-      return render_template('contact.html', form=form)
-    else:
+  sendModule.sendMail(to,name)
 
-      sendModule.sendMail(form.email.data,form.name.data)
-
-      return render_template('contact.html', success=True)
-
-  elif request.method == 'GET':
-    return render_template('contact.html', form=form)
+  return json.dumps({'status':'subscribed','to':to,'name':name});
   
 if __name__ == '__main__':
   app.run(debug=True)

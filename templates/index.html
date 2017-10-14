@@ -187,14 +187,13 @@
   <div class="subscribeToOverStudio" id="subscribe-page-1">
     <div class="subscribe">
     <h2>Subscribe to our newsletter</h2>
-     {% block content %}
-      {% endblock %}
-
-	
-		
-	</div>
+    <form>
+      <input ng-model="subscriberName" type="text" placeholder="Name*">
+      <input ng-model="subscriberEmail" type="email" placeholder="Email*">
+      <button ng-click="subscribe()">Subscribe</button>
+    </form>
     </div>
-  </div>
+</div>
 
 
 
