@@ -15,14 +15,31 @@ def home():
 
 
 @app.route('/subscribeUser', methods=['POST'])
-
 def contact():
-  to =  request.form['to']
-  name = request.form['name']
+  UserEmail =  request.form['to']
+  UserName = request.form['name']
 
-  sendModule.sendMail(to,name)
+  sendModule.subscribeUser_UserSide(UserEmail,UserName)
+  sendModule.subscribeUser_StudioSide(UserEmail,UserName)
 
-  return json.dumps({'status':'subscribed','to':to,'name':name});
+  return json.dumps({'status':'subscribed','UserEmail':UserEmail,'UserName':UserName});
+
+@app.route('/orderProject', methods=['POST'])
+def order():
+  CustomerName = request.form['CustomerName']
+  CustomerEmail = request.form['CustomerEmail']
+  CustomerPhone = request.form['CustomerPhone']
+  CustomerLocation = request.form['CustomerLocation']
+  CustomerCompany = request.form['CustomerCompany']
+  CustomerTypeProject = request.form['CustomerTypeProject']
+  CustomerProjectDetails = request.form['CustomerProjectDetails']
+
+  sendModule.orderProject_UserSide(CustomerName, CustomerEmail, CustomerPhone, CustomerLocation, CustomerCompany, CustomerTypeProject,  CustomerProjectDetails)
+  sendModule.orderProject_StudioSide(CustomerName, CustomerEmail, CustomerPhone, CustomerLocation, CustomerCompany, CustomerTypeProject,  CustomerProjectDetails)
+
+  return json.dumps({'status':'ordered','CustomerEmail':CustomerEmail,'CustomerName':CustomerName});
   
 if __name__ == '__main__':
   app.run(debug=True)
+
+

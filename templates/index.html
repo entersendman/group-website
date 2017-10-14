@@ -187,6 +187,7 @@
   <div class="subscribeToOverStudio" id="subscribe-page-1">
     <div class="subscribe">
     <h2>Subscribe to our newsletter</h2>
+    <p ng-show="HasSubscribe">You has successfully subscribed</p>
     <form>
       <input ng-model="subscriberName" type="text" placeholder="Name*">
       <input ng-model="subscriberEmail" type="email" placeholder="Email*">
@@ -210,14 +211,14 @@
 
     <form>
        
-     <input type="text" placeholder="Name*">
-     <input type="email" placeholder="Email*"> 
-     <input type="text" placeholder="Phone*">
-     <input type="text" id="text-location" placeholder="Location"> 
-     <input type="text" placeholder="Company">
-     <input type="text" id="text-type-of" placeholder="Type of Project*"> 
-     <textarea placeholder="Project Details"></textarea> 
-     <button>Submit</button></li>
+     <input ng-model="CustomerName" type="text" placeholder="Name*">
+     <input ng-model="CustomerEmail" type="email" placeholder="Email*"> 
+     <input ng-model="CustomerPhone" type="text" placeholder="Phone*">
+     <input ng-model="CustomerLocation" type="text" id="text-location" placeholder="Location"> 
+     <input ng-model="CustomerCompany" type="text" placeholder="Company">
+     <input ng-model="CustomerTypeProject" type="text" id="text-type-of" placeholder="Type of Project*"> 
+     <textarea ng-model="CustomerProjectDetails" placeholder="Project Details"></textarea> 
+     <button ng-click="order()">Submit</button></li>
      
     </form>
     

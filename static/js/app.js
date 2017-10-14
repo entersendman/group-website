@@ -26,9 +26,9 @@ angular.module('overstudio', ['ui.router'])
   $stateProvider.state(contactState);
   $urlRouterProvider.otherwise('/');
 })
-
 .controller('MainCtrl', ['$scope', function($scope) {
 
+$scope.HasSubscribe = false;
 $scope.subscriberName;
 $scope.subscriberEmail;
 $scope.subscribe = function() {
@@ -41,9 +41,46 @@ $.ajax({
 	datatype:"json",
 	data: $scope.data,
 	success: function(response){
-	    console.log(response);
+	    if (response["status"]=='subscribed') {
+        $scope.HasSubscribe = true;
+      }
 	}
 });
+$scope.subscriberName = '';
+$scope.subscriberEmail = '';
+}
+}])
+.controller('ContactCtrl', ['$scope', function($scope) {
+
+$scope.CustomerName;
+$scope.CustomerEmail;
+$scope.CustomerPhone;
+$scope.CustomerLocation;
+$scope.CustomerCompany;
+$scope.CustomerTypeProject;
+$scope.CustomerProjectDetails;
+$scope.order = function() {
+
+$scope.data = {CustomerName:$scope.CustomerName,CustomerEmail: $scope.CustomerEmail,CustomerPhone: $scope.CustomerPhone,CustomerLocation: $scope.CustomerLocation,CustomerCompany: $scope.CustomerCompany,CustomerTypeProject: $scope.CustomerTypeProject,CustomerProjectDetails: $scope.CustomerProjectDetails};
+
+
+$.ajax({
+  url: "/orderProject",
+  type: "post",
+  datatype:"json",
+  data: $scope.data,
+  success: function(response){
+      console.log(response);
+  }
+});
+$scope.CustomerName = '';
+$scope.CustomerEmail = '';
+$scope.CustomerPhone = '';
+$scope.CustomerLocation = '';
+$scope.CustomerCompany = '';
+$scope.CustomerTypeProject = '';
+$scope.CustomerProjectDetails = '';
 }
 }]);
+
 
