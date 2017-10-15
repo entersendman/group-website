@@ -1,0 +1,1000 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700');
+
+* {
+  -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+body, html {
+  margin:0;
+  padding:0;
+  font-family: 'Raleway', sans-serif;
+}
+
+h2 {
+  text-transform: uppercase;
+}
+#over {
+  color: #d0364b;
+}
+
+#dont-animate {
+  animation: none;
+}
+
+/*  _   _                _            */
+/* | | | |              | |           */
+/* | |_| | ___  __ _  __| | ___ _ __  */
+/* |  _  |/ _ \/ _` |/ _` |/ _ \ '__| */
+/* | | | |  __/ (_| | (_| |  __/ |    */
+/* \_| |_/\___|\__,_|\__,_|\___|_|    */
+
+.header {
+  overflow: hidden;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  background: #433e3b;
+  top: 0;
+  color: white;
+  flex-wrap: wrap;
+  padding: 15px 10px 10px 20px;
+  width: 100%;
+  position: fixed;
+  transition: max-height 1s;
+  transition-duration: 0.2s;
+}
+
+.nav-up {
+    max-height: 0px;
+    background-color: white;
+}
+
+.header ul li a , .header .logo a{
+  text-transform: none;
+  text-decoration: none;
+  color: #FFF;
+}
+
+.header ul li a:hover {
+  color: #d0364b;
+}
+
+.header .logo {
+  padding: 16px 0px;
+  letter-spacing: 0.15rem;
+  font-weight: 700;
+}
+
+.header-element {
+  flex-grow: 1;
+  list-style: none;
+  display: inline-flex;
+  padding-right: 50px;
+}
+
+@media only screen and (max-width:900px) {
+  .header {
+    flex-direction: column;
+  }
+  .header ul {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width:420px) {
+  .header-element {
+    padding-right: 20px;
+  }
+}
+
+
+/*  _____             _        _                  */
+/* /  __ \           | |      (_)                 */
+/* | /  \/ ___  _ __ | |_ __ _ _ _ __   ___ _ __  */
+/* | |    / _ \| '_ \| __/ _` | | '_ \ / _ \ '__| */
+/* | \__/\ (_) | | | | || (_| | | | | |  __/ |    */
+/*  \____/\___/|_| |_|\__\__,_|_|_| |_|\___|_|    */
+
+.container {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+/*******************************************/
+/* START CSS_CODE FOR PRESENTATION SECTION */
+/*******************************************/
+
+.presentation {  
+  position: relative;
+  width:100%;
+  height: 35vh;
+  overflow: hidden;
+}
+
+.for-animation {
+  position: relative;
+  display: inline-block;
+  text-align: left;
+}
+#studio {
+  letter-spacing: 0.6rem;
+  transform: translateY(300%);
+  animation-name: to-up-studio;
+  animation-duration: 7s;
+}
+#html-animation {
+  transform: translateY(-1000%);
+  animation-name: to-up-html;
+  animation-duration: 7s;
+}
+
+#css {
+  transform: translateY(1000%);
+  animation-name: to-up-css;
+  animation-duration: 7s; 
+}
+#javascript {
+  transform: translateY(-1000%);
+  animation-name: to-up-javascript;
+  animation-duration: 7s; 
+}
+#studio , #html-animation, #css, #javascript{
+  display: block;
+}
+
+
+@media only screen and (max-width:900px) {
+  .presentation .outer .middle .inner-adaptive {
+    display: block;
+  }
+  #studio {
+  letter-spacing: 0.6rem;
+  transform: translateY(300%);
+  animation-name: none;
+}
+#html-animation {
+  display: none;
+  animation-name: none;
+}
+
+#css {
+  display: none;
+  animation-name: none;
+}
+#javascript {
+  display: none;
+  animation: none;
+}
+.inner {
+  display: none;
+}
+}
+/*****************************************/
+/* END CSS_CODE FOR PRESENTATION SECTION */
+/*****************************************/
+
+
+
+
+
+
+
+
+
+/*****************************************/
+/* START CSS_CODE FOR WHO-WE-ARE SECTION */
+/*****************************************/
+
+.who-we-are {
+  width:100%;
+  background-color: #433e3b;
+  color: white;
+  padding: 20px 0 30px;
+}
+
+.who-we-are .our-team {
+  font-size: 1rem;
+  max-width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.who-we-are .our-team h2{
+  /*font-size: 25px;*/
+  font-weight: 300;
+}
+
+.who-we-are .our-team p {
+  max-width: 80%;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  text-align: justify;
+}
+
+.who-we-are .our-team ul{
+  margin: 0;
+  padding: 0;
+}
+
+.who-we-are .our-team ul li {
+  list-style: none;
+  display: inline-block;
+  width: 33%;
+}
+
+.who-we-are .our-team ul li img{
+  border-radius: 50%;
+}
+
+.who-we-are .our-team .about-person {
+  font-weight: 700;
+}
+
+.who-we-are .our-team .about-person-desc {
+  font-size: 0.85rem;
+}
+
+.who-we-are .our-team ul li ul{
+  margin-top: 20px;
+}
+
+.who-we-are .our-team ul li ul li{
+  width: 100%;
+  display: block;
+}
+@media only screen and (max-width:900px) {
+  .who-we-are .our-team ul li.adaptive-for {
+  display:block;
+  width: 100%;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.who-we-are .our-team {
+  max-width: 100%;
+}
+}
+/***************************************/
+/* END CSS_CODE FOR WHO-WE-ARE SECTION */
+/***************************************/
+
+
+
+
+
+
+
+
+
+/************************************/
+/* START CSS_CODE FOR ICONs SECTION */
+/************************************/
+.block-icons{
+  width:100%;
+  padding: 20px 0 30px;
+}
+
+.block-icons .icons {
+  text-align: center;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.block-icons .icons h2 {
+  font-size: 25px;
+  font-weight: 300;
+}
+.block-icons .icons p{
+  font-size: 1.2rem;
+  text-align: justify;
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+.block-icons .icons ul {
+  margin: 0;
+  padding: 0;
+}
+
+.block-icons .icons ul li {
+  display: inline-block;
+  width: 24%;
+}
+
+.block-icons .icons ul li img {
+  width: 50%;
+}
+
+.block-icons .icons ul li .icon-desc {
+  font-weight: 700;
+}
+
+@media only screen and (max-width:720px) {
+  .block-icons .icons ul li {
+  display: inline-block;
+  width: 80%;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.block-icons .icons ul li img {
+  width: 30%;
+}
+.block-icons .icons p{
+  width: 100%;
+}
+}
+
+/**********************************/
+/* END CSS_CODE FOR ICONs SECTION */
+/**********************************/
+
+
+
+
+.overstudio {
+  width:100%;  
+  background-color: #433e3b;
+  color: #fff;
+  text-align: center;
+}
+
+.overstudio .approach {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.overstudio .approach h2 {
+  font-size: 25px;
+  font-weight: 300;
+}
+
+.overstudio .approach p{
+  width: 80%;
+  font-size: 1.2rem;
+  text-align: justify;
+  margin: 0 auto;
+}
+
+.overstudio .approach ul {
+  padding: 0;
+}
+
+.overstudio .approach ul li  {
+  margin: 0 auto;  
+  display: inline-block;
+  list-style: none;
+  padding:8px;
+  width: 31%;
+}
+.overstudio .approach ul li img {
+  height: 100%;
+  width: 100%;
+}
+.overstudio .approach ul li .approach-animation {
+  position: relative;
+}
+.overstudio .approach ul li .approach-animation img {
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+.overstudio .approach ul li .approach-animation .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #d0364b;
+}
+.overstudio .approach ul li .approach-animation .overlay .text {
+  background-color: #d0364b;
+  color: white;
+  font-size: 16px;
+  padding: 16px 10px;
+
+}
+.overstudio .approach ul li .approach-animation .overlay .text h3 {
+  color: white;
+  font-weight: 500;
+  margin: 1rem;
+  font-size: 2.5rem;
+  }
+.overstudio .approach ul li .approach-animation .overlay .text p {
+  font-size: 1rem;
+}
+.overstudio .approach ul li .approach-animation:hover .overlay {
+  opacity: 0.9;
+}
+@media only screen and (max-width: 720px) {
+  .overstudio .approach ul li  {
+   
+  display:block;
+  width: 80%;
+  margin: 0 auto;
+  }
+  .overstudio .approach {
+  max-width: 100%;
+}
+.overstudio .approach ul li .approach-animation .overlay .text h3 {
+  margin-top: 4rem;
+}
+}
+@media only screen and (max-width: 900px) {
+.overstudio .approach ul li .approach-animation .overlay .text p{
+display: none;
+}
+.overstudio .approach ul li .approach-animation .overlay .text h3 {
+  font-size: 1.8rem;
+}
+}
+
+/****************************************/
+/* START CSS_CODE FOR PHILOSOPHY SECTION */
+/****************************************/
+
+.overstudio-philosophy-container{
+  width:100%;
+  background-color: #fff;
+  padding: 35px 0 35px 0;
+  text-align: justify;
+  line-height: 1.2em;
+  
+}
+.overstudio-philosophy
+{
+	width:80%;
+	margin: 0 auto;
+}
+
+.overstudio-philosophy p{
+  width: 80%;
+  font-size: 1.2rem;
+  margin: 0 auto;
+}
+.overstudio-philosophy h2 {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 300;
+}
+
+@media only screen and (max-width: 480px) {
+.overstudio-philosophy {
+  width:100%;
+  margin: 0 auto;
+}
+}
+/****************************************/
+/* END CSS_CODE FOR PHILOSOPHY SECTION   */
+/****************************************/
+
+/****************************************/
+/* START CSS_CODE FOR SUBSCRIBE SECTION */
+/****************************************/
+
+.subscribeToOverStudio{
+  
+  
+  padding: 20px 0 30px;
+  
+}
+
+.subscribeToOverStudio .subscribe {
+  max-width: 80%;
+  margin: 0 auto;
+  text-align: center;
+
+}
+
+.subscribeToOverStudio .subscribe form {
+  max-width: 80%;
+  margin: 0 auto;
+  text-align: center;
+
+}
+.subscribeToOverStudio .subscribe h2 {
+  font-size: 25px;
+  font-weight: 300;
+}
+
+
+.subscribeToOverStudio  .subscribe button {
+  font-size: 18px;
+  padding: 9px 8px 8px;
+  color: #d0364b;
+  font-weight: 700;
+  cursor: pointer;
+  border: 2px solid #d0364b;
+  background: none;
+  transition: 0.4s;
+  width: 90%;
+}
+.subscribeToOverStudio .subscribe button:hover {
+  color: white;
+  background: #d0364b;
+}
+
+.subscribeToOverStudio .subscribe input[type=text],.subscribe textarea,.subscribe input[type=email] {
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  padding: 12px 11px 15px;
+  color: #d0364b;
+  font-weight: 700;
+  border: 2px solid #d0364b;
+  background: none;
+  margin-bottom:10px;
+  outline: none;
+}
+#subscribe-page-1 {
+  border-top: 2px solid #d0364b;
+}
+.subscribeToOverStudio .subscribe input[type=text] { 
+  width: 35%;
+}
+
+
+.subscribeToOverStudio .subscribe input[type=email] { 
+  width: 55%;
+}
+
+#text-location {
+  width: 55%;
+}
+#text-type-of {
+  width: 55%;
+}
+
+
+@media only screen and (max-width:480px)  {
+   #text-location,  #text-type-of, .subscribeToOverStudio .subscribe input[type=text], .subscribeToOverStudio .subscribe input[type=email], .subscribeToOverStudio  .subscribe button { 
+  width: 100%;
+}
+.subscribeToOverStudio .subscribe form{
+  max-width: 100%;
+}
+}
+
+/****************************************/
+/* END CSS_CODE FOR SUBSCRIBE SECTION   */
+/****************************************/
+
+
+
+
+
+
+
+
+
+.contact-container {  
+  width:80%;  
+  margin: 0 auto 20px;
+  text-align: center;
+}
+.contact-container form {  
+  width:80%;  
+  margin: 0 auto;
+}
+.contact-container  textarea {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+width: 90.5%;
+}
+.contact-container  h2 {
+  font-size: 25px;
+  font-weight: 300;
+  text-align: center;
+}
+.contact-container  h1 {  
+  text-align: center;
+}
+.contact-container button {
+  font-size: 15px;
+  padding: 12px 11px 15px;
+  color: #d0364b;
+  font-weight: 700;
+  cursor: pointer;
+  border: 2px solid #d0364b;
+  background: none;
+  transition: 0.4s;
+  margin: 0 auto;
+  width: 90.5%;
+}
+.contact-container  button:hover {
+  color: white;
+  background: #d0364b;
+}
+
+.contact-container input[type=text],textarea, input[type=email],#text-location,#text-type-of  {
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  padding: 12px 11px 15px;
+  color: #d0364b;
+  font-weight: 700;
+  border: 2px solid #d0364b;
+  background: none;
+  margin:0 auto 10px;
+  outline: none;
+}
+#subscribe-page-1 {
+  border-top: 2px solid #d0364b;
+}
+.contact-container input[type=text] { 
+  width: 35%;
+}
+.contact-container input[type=email] { 
+  width: 55%;
+}
+
+@media only screen and (max-width:480px) {
+  .contact-container input[type=text],.contact-container input[type=email], .contact-container  textarea, .contact-container  button {
+    width: 100%;
+  }
+}
+
+
+
+/* ______          _             */
+/* |  ___|        | |            */
+/* | |_ ___   ___ | |_ ___ _ __  */
+/* |  _/ _ \ / _ \| __/ _ \ '__| */
+/* | || (_) | (_) | ||  __/ |    */
+/* \_| \___/ \___/ \__\___|_|    */
+
+.footer {
+  display: flex;  
+  padding:30px 10% 15px 10%;
+  max-width:100%;
+  color: white;
+  background: #433e3b;
+  margin: 0 auto;
+  
+  flex-direction: column;
+}
+.footer .the-end-of-footer {
+display: block;
+ text-align: center;  
+}
+.footer .footer-contacts {
+  width: 80%;
+  font-size:2.7rem;
+  margin: 0 auto;
+}
+
+.footer .footer-contacts ul a {
+  text-decoration: none;
+  color: white;
+}
+.footer .footer-contacts ul a:hover {
+  color: #d0364b;
+}
+
+.footer .footer-contacts ul{
+  
+  margin:0;
+  list-style:none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding:0;  
+}
+.footer .footer-contacts ul li{
+  padding:10px;  
+}
+#copy {
+  font-size: 1rem;
+}
+.footer .the-end-of-footer p{
+  padding:0;
+  margin: 0;
+}
+#the-end-of-the-end-of-footer {
+  font-size: 2rem;
+}
+
+
+
+
+
+
+/*  ___   _   _ ________  ___  ___ _____ _____ _____ _   _  _____   */
+/*  / _ \ | \ | |_   _|  \/  | / _ \_   _|_   _|  _  | \ | |/  ___| */
+/* / /_\ \|  \| | | | | .  . |/ /_\ \| |   | | | | | |  \| |\ `--.  */
+/* |  _  || . ` | | | | |\/| ||  _  || |   | | | | | | . ` | `--. \ */
+/* | | | || |\  |_| |_| |  | || | | || |  _| |_\ \_/ / |\  |/\__/ / */
+/* \_| |_/\_| \_/\___/\_|  |_/\_| |_/\_/  \___/ \___/\_| \_/\____/  */
+  
+@keyframes to-up-all {
+  0% {
+    transform: translateY(-5vh);
+  }
+  85% {
+    transform: translateY(-5vh);
+  }
+  100% {
+    transform: translateY(-25vh);
+  }
+}
+
+@keyframes minimaze-height {
+  0% {
+    height: 70vh;
+  }
+  80% {
+    height: 70vh;
+  }
+  100% {
+    height: 20vh;
+  }
+}
+
+@keyframes to-up-studio {
+0% { 
+     transform: translateY(300%);
+    }
+    10% {
+    }
+20% { 
+      opacity: 0;
+      transform: translateY(1000%);
+      
+    }
+40% { 
+
+    }
+60% { 
+    transform: translateY(1000%);
+    
+    }
+72% {
+  opacity: 0;
+}
+80% { 
+  opacity: 1;
+  transform: translateY(300%);
+  
+    }
+100% { 
+     transform: translateY(300%);
+    }
+}
+
+@keyframes to-up-html {
+0% { 
+     transform: translateY(-1000%);
+    }
+10% {
+  opacity: 0;
+}
+20% { 
+  opacity: 1;
+      transform: translateY(200%);
+    }
+30% {
+  opacity: 0;
+}
+40% { 
+      transform: translateY(-1000%);
+    }
+60% { 
+
+    }
+80% { 
+    }
+100% { 
+     transform: translateY(-1000%);
+    }
+}
+
+@keyframes to-up-css {
+0% { 
+     transform: translateY(1000%);
+    }
+20% { 
+      transform: translateY(1000%);
+    }
+    30% {
+      opacity: 0;
+    }
+40% { 
+      opacity: 1;
+      transform: translateY(100%);
+    }
+50% {
+  opacity: 0;
+}
+60% { 
+      transform: translateY(1000%);
+    }
+80% { 
+    }
+100% { 
+     transform: translateY(2000%);
+    }
+}
+
+@keyframes to-up-javascript {
+0% { 
+     transform: translateY(-1000%);
+    }
+20% { 
+
+    }
+40% { 
+    transform: translateY(-1000%);
+    }
+    50% {
+      opacity: 0;
+    }
+60% { 
+  opacity: 1;
+      transform: translateY(0%);
+    }
+70% {
+opacity: 0;
+}
+80% { 
+  transform: translateY(-1000%);
+    }
+100% { 
+     transform: translateY(-1000%);
+    }
+}
+
+/**************/
+/* TMP FILEAS */
+/**************/
+.outer {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.middle {
+  padding: 20px;
+  display: table-cell;
+  vertical-align: middle;
+  transition: 1s;
+}
+
+.inner {
+  margin:  auto;
+  position: relative;
+  max-width: 800px;
+  text-align: center;
+  padding: 10px 20px 50vh 20px;
+  border-radius: 3px;
+  font-size: 3rem;
+  transition: 0.2s;
+  transform: translateY(-15vh);
+}
+
+.inner-adaptive {
+  display: none;
+  margin:  auto;
+  position: relative;
+  max-width: 800px;
+  text-align: center;
+  padding: 10px 20px 50px 20px;
+  font-size: 3rem;
+  transition: 0.2s;
+}
+
+/*****************************************/
+/* START CSS_CODE FOR WORKS */
+/*****************************************/
+.works-container {
+  width:100%;  
+  background-color: #fff;
+  color: #fff;
+  text-align: center;
+}
+
+.works-container .works {
+  max-width: 80%;
+  margin: 0 auto;
+}
+.works-container .works h1 {
+  font-weight: 700;
+  color:black;
+}
+
+.works-container .works h2 {
+  font-size: 25px;
+  font-weight: 500;
+  color:black;
+}
+
+.works-container .works p{
+  width: 80%;
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 0 auto;
+  color:black;
+
+}
+
+.works-container .works ul {
+  padding: 0;
+}
+
+.works-container .works ul li  {
+  margin: 0 auto;  
+ 
+  list-style: none;
+  padding:8px;
+  width: 80%;
+}
+.works-container .works ul li img {
+  height: 80%;
+  width: 80%;
+}
+.works-container .works ul li .works-animation {
+  position: relative;
+}
+.works-container .works ul li .works-animation img {
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;
+
+}
+.works-container .works ul li .works-animation .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #443e3c;
+  width: 80%;
+  margin: 0 auto;
+}
+.works-container .works ul li .works-animation .overlay .text {
+  background-color: #443e3c;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+.works-container .works ul li .works-animation .overlay .text h3 {
+  color: #cf364b;
+  font-weight: 500;
+  font-size: 2.5rem;
+  }
+.works-container .works ul li .works-animation .overlay .text p {
+  color: white;
+}
+.works-container .works ul li .works-animation:hover .overlay {
+  opacity: 0.9;
+}
+
+@media only screen and (max-width:800px) {
+  .works-container .works ul li  {
+  width: 100%;
+}
+.works-container .works ul li .works-animation .overlay {
+  width: 100%;
+}
+.works-container .works ul li .works-animation .overlay .text p {
+  display: none;
+}
+}
+
+@media only screen and (max-width:480px) {
+.works-container .works ul li img {
+  height: 100%;
+  width: 100%;
+}
+}
+
+
+/*****************************************/
+/* END CSS_CODE FOR WORKS */
+/*****************************************/
