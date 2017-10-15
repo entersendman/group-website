@@ -56,7 +56,7 @@ def orderProject_StudioSide(CustomerName, CustomerEmail, CustomerPhone, Customer
 	smtpserverOrderStudio.login(gmail_user, gmail_pwd)
 	header = 'To:' + gmail_user + '\n' + 'From: ' + gmail_user + '\n'+'Subject:OrderProject\n'
 	#print header
-	msgStudio = header + CustomerEmail  + CustomerName + CustomerPhone + CustomerTypeProject 
+	msgStudio = header + CustomerEmail +  CustomerName + CustomerPhone + CustomerLocation  +  CustomerTypeProject  + CustomerCompany  + CustomerTypeProject
 	smtpserverOrderStudio.sendmail(gmail_user, gmail_user, msgStudio)
 	#print 'done!'
 	smtpserverOrderStudio.close()
