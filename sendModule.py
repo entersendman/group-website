@@ -3,7 +3,7 @@ import smtplib
 
 def subscribeUser_UserSide(toUser,name):
 	gmail_user = 'overstudiogroup@gmail.com'
-	gmail_pwd = 'kafedra407++'
+	gmail_pwd = getPass()
 	smtpserver = smtplib.SMTP("smtp.gmail.com",587)
 	smtpserver.ehlo()
 	smtpserver.starttls()
@@ -18,7 +18,7 @@ def subscribeUser_UserSide(toUser,name):
 
 def subscribeUser_StudioSide(UserEmail,name):
 	gmail_user = 'overstudiogroup@gmail.com'
-	gmail_pwd = 'kafedra407++'
+	gmail_pwd = getPass()
 	smtpserverStudio = smtplib.SMTP("smtp.gmail.com",587)
 	smtpserverStudio.ehlo()
 	smtpserverStudio.starttls()
@@ -33,7 +33,7 @@ def subscribeUser_StudioSide(UserEmail,name):
 
 def orderProject_UserSide(CustomerName, CustomerEmail, CustomerPhone, CustomerLocation, CustomerCompany, CustomerTypeProject,  CustomerProjectDetails):
 	gmail_user = 'overstudiogroup@gmail.com'
-	gmail_pwd = 'kafedra407++'
+	gmail_pwd = getPass()
 	smtpserverOrder = smtplib.SMTP("smtp.gmail.com",587)
 	smtpserverOrder.ehlo()
 	smtpserverOrder.starttls()
@@ -48,7 +48,7 @@ def orderProject_UserSide(CustomerName, CustomerEmail, CustomerPhone, CustomerLo
 
 def orderProject_StudioSide(CustomerName, CustomerEmail, CustomerPhone, CustomerLocation, CustomerCompany, CustomerTypeProject,  CustomerProjectDetails):
 	gmail_user = 'overstudiogroup@gmail.com'
-	gmail_pwd = 'kafedra407++'
+	gmail_pwd = getPass()
 	smtpserverOrderStudio = smtplib.SMTP("smtp.gmail.com",587)
 	smtpserverOrderStudio.ehlo()
 	smtpserverOrderStudio.starttls()
@@ -56,19 +56,22 @@ def orderProject_StudioSide(CustomerName, CustomerEmail, CustomerPhone, Customer
 	smtpserverOrderStudio.login(gmail_user, gmail_pwd)
 	header = 'To:' + gmail_user + '\n' + 'From: ' + gmail_user + '\n'+'Subject:OrderProject\n'
 	#print header
-	msgStudio = header + CustomerEmail  + CustomerName + CustomerPhone + CustomerTypeProject 
+	msgStudio = header + CustomerEmail  + CustomerName + CustomerPhone + CustomerTypeProject + CustomerLocation
 	smtpserverOrderStudio.sendmail(gmail_user, gmail_user, msgStudio)
 	#print 'done!'
 	smtpserverOrderStudio.close()
 
+def getPass():
+	pass_file = open('pass', 'r')
+	password=pass_file.readline().rstrip('\n')
+	pass_file.close()
+	return password
+
 def main():
-	sendMail("volodya.ternopil1997@gmail.com","module test")
+	#sendMail("volodya.ternopil1997@gmail.com",)
+	print(getPass())
+	subscribeUser_UserSide("volodya.ternopil1997@gmail.com","module test")
+	
 
 if __name__ == '__main__':
 	main()
-
-	
-
-
-
-
