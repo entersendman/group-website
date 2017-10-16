@@ -3,7 +3,7 @@ import smtplib
 
 def subscribeUser_UserSide(toUser,name):
 	gmail_user = 'overstudiogroup@gmail.com'
-	gmail_pwd = getPass()
+	gmail_pwd = 'kafedra407++'
 	smtpserver = smtplib.SMTP("smtp.gmail.com",587)
 	smtpserver.ehlo()
 	smtpserver.starttls()
@@ -18,7 +18,7 @@ def subscribeUser_UserSide(toUser,name):
 
 def subscribeUser_StudioSide(UserEmail,name):
 	gmail_user = 'overstudiogroup@gmail.com'
-	gmail_pwd = getPass()
+	gmail_pwd = 'kafedra407++'
 	smtpserverStudio = smtplib.SMTP("smtp.gmail.com",587)
 	smtpserverStudio.ehlo()
 	smtpserverStudio.starttls()
@@ -33,7 +33,7 @@ def subscribeUser_StudioSide(UserEmail,name):
 
 def orderProject_UserSide(CustomerName, CustomerEmail, CustomerPhone, CustomerLocation, CustomerCompany, CustomerTypeProject,  CustomerProjectDetails):
 	gmail_user = 'overstudiogroup@gmail.com'
-	gmail_pwd = getPass()
+	gmail_pwd = 'kafedra407++'
 	smtpserverOrder = smtplib.SMTP("smtp.gmail.com",587)
 	smtpserverOrder.ehlo()
 	smtpserverOrder.starttls()
@@ -48,7 +48,7 @@ def orderProject_UserSide(CustomerName, CustomerEmail, CustomerPhone, CustomerLo
 
 def orderProject_StudioSide(CustomerName, CustomerEmail, CustomerPhone, CustomerLocation, CustomerCompany, CustomerTypeProject,  CustomerProjectDetails):
 	gmail_user = 'overstudiogroup@gmail.com'
-	gmail_pwd = getPass()
+	gmail_pwd = 'kafedra407++'
 	smtpserverOrderStudio = smtplib.SMTP("smtp.gmail.com",587)
 	smtpserverOrderStudio.ehlo()
 	smtpserverOrderStudio.starttls()
@@ -61,15 +61,10 @@ def orderProject_StudioSide(CustomerName, CustomerEmail, CustomerPhone, Customer
 	#print 'done!'
 	smtpserverOrderStudio.close()
 
-def getPass():
-	pass_file = open('pass', 'r')
-	password=pass_file.readline().rstrip('\n')
-	pass_file.close()
-	return password
 
 def main():
 	#sendMail("volodya.ternopil1997@gmail.com",)
-	print(getPass())
+	
 	subscribeUser_UserSide("volodya.ternopil1997@gmail.com","module test")
 	
 
