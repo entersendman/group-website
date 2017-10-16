@@ -1,10 +1,10 @@
 // Hide Header on on scroll down
 var didScroll;
 var lastScrollTop = 0;
-var delta = 10;
+var delta = 3;
 var navbarHeight = $('header').outerHeight();
 console.log(navbarHeight);
-$('body').css('padding-top', navbarHeight);
+$('body').css('maegin-top', navbarHeight);
 $(window).scroll(function(event){
     didScroll = true;
 });
@@ -27,14 +27,14 @@ function hasScrolled() {
     // This is necessary so you never see what is "behind" the navbar.
     if (st > lastScrollTop && st > navbarHeight){
         // Scroll Down
-        console.log("down");
+       
         $('header').removeClass('header').addClass('nav-up');
 
     } else {
         // Scroll Up
         if(st + $(window).height() < $(document).height()) {
             $('header').removeClass('nav-up').addClass('header');
-            console.log("fuck");
+           
         }
     }
     

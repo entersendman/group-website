@@ -26,28 +26,43 @@ angular.module('overstudio', ['ui.router'])
   $stateProvider.state(contactState);
   $urlRouterProvider.otherwise('/');
 })
-.controller('MainCtrl', ['$scope', function($scope) {
+.controller('MainCtrl', ['$scope','$http', function($scope, $http) {
 
-$scope.HasSubscribe = false;
+
+$scope.HasNotSubscribe = true; //Не подписався на хуях сидіть остався
 $scope.subscriberName;
 $scope.subscriberEmail;
 $scope.subscribe = function() {
 
 $scope.data = {name:$scope.subscriberName, to: $scope.subscriberEmail};
 
+        
+        
 $.ajax({
 	url: "/subscribeUser",
 	type: "post",
 	datatype:"json",
 	data: $scope.data,
 	success: function(response){
-
-	    if (response["status"]=='subscribed') {
-        $scope.HasSubscribe = true;
+    console.log(response);
+    console.log($scope.subscriberName);
         $scope.subscriberName = '';
         $scope.subscriberEmail = '';
-      }
+
+    console.log($scope.subscriberName);
+    console.log($scope.HasNotSubscribe);
 	}
+});
+
+
+$http({
+        method : "post",
+        url : "/subscribeUser"
+    }).then(function mySuccess(response) {
+        $scope.subscriberName = '';
+        $scope.subscriberEmail = '';
+        $scope.formSubscribe.name.$touched = false;
+    }, function myError(response) {
 });
 
 }
@@ -84,6 +99,11 @@ $.ajax({
 });
 
 }
+}])
+.controller('WorksCtrl', ['$scope', function($scope) {
+
 }]);
+
+
 
 

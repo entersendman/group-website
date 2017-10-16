@@ -491,9 +491,7 @@ display: none;
   text-align: center;
 
 }
-.subscribeToOverStudio .subscribe form input.ng-invalid.ng-touched {
-  border: 2px solid red;
-}
+
 .subscribeToOverStudio .subscribe form button[disabled="disabled"] {
   opacity: 0.4;
   cursor: not-allowed !important;
@@ -506,18 +504,16 @@ display: none;
 
 }
 .subscribeToOverStudio .subscribe form #invalidOutput {
-  color:red; 
-  width: 100%;
-  text-align:left;
-  display: table-caption;
-  padding-left: 25px;
+  color:red;
+  display: inline-block;
+  position: relative;
+  width: 35%;
 }
 .subscribeToOverStudio .subscribe form #invalidOutputEmail {
-  color:red;   
-  text-align:right;
-  display: table-caption;
-  padding-right: 25px;
-  width: 100%;
+  color:red;
+  display: inline-block;
+  position: relative;
+  width: 55%;
 }
 .subscribeToOverStudio .subscribe h2 {
   font-size: 25px;
@@ -555,22 +551,15 @@ display: none;
 #subscribe-page-1 {
   border-top: 2px solid #d0364b;
 }
-.subscribeToOverStudio .subscribe input[type=text] { 
-  width: 35%;
+.subscribeToOverStudio .subscribe input[type=text], .subscribeToOverStudio .subscribe input[type=email] { 
+  width: 100%;
 }
 
 
-.subscribeToOverStudio .subscribe input[type=email] { 
-  width: 55%;
-}
 
 #text-location {
   width: 55%;
 }
-#text-type-of {
-  width: 55%;
-}
-
 
 @media only screen and (max-width:480px)  {
    #text-location,  #text-type-of, .subscribeToOverStudio .subscribe input[type=text], .subscribeToOverStudio .subscribe input[type=email], .subscribeToOverStudio  .subscribe button { 
@@ -603,22 +592,18 @@ display: none;
   margin: 0 auto;
 }
 .contact-container form #invalidOutput {  
-  color:red; 
-  width: 100%;
-  text-align:left;
-  display: table-caption;
-  padding-left: 25px;
+  color:red;
+  display: inline-block;
+  position: relative;
+  width: 35%;
 }
 .contact-container form #invalidOutputEmail {  
-  color:red; 
-  width: 100%;
-  text-align:left;
-  display: table-caption;
-  padding-right:  25px;
+  color:red;
+  display: inline-block;
+  position: relative;
+  width: 55%;
 }
-.contact-container form input.ng-invalid.ng-touched {
-  border: 2px solid red;
-}
+
 .contact-container form button[disabled="disabled"] {
   opacity: 0.4;
   cursor: not-allowed !important;
@@ -649,6 +634,10 @@ width: 90.5%;
   margin: 0 auto;
   width: 90.5%;
 }
+.contact-container  form button[disabled="disabled"] {
+  opacity: 0.4;
+  cursor: not-allowed !important;
+}
 .contact-container  button:hover {
   color: white;
   background: #d0364b;
@@ -665,14 +654,18 @@ width: 90.5%;
   margin:0 auto 10px;
   outline: none;
 }
+
 #subscribe-page-1 {
   border-top: 2px solid #d0364b;
 }
 .contact-container input[type=text] { 
+  width: 100%;
+}
+#contact-company {
   width: 35%;
 }
 .contact-container input[type=email] { 
-  width: 55%;
+  width: 100%;
 }
 
 @media only screen and (max-width:480px) {
