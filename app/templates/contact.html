@@ -1,0 +1,11 @@
+<form name="formSubscribe" novalidate>
+        <div ng-show="formSubscribe.name.$touched && formSubscribe.name.$invalid" id="invalidOutput" >
+              Enter a valid name
+                    </div>
+      <input ng-model="subscriberName" type="text" placeholder="Name*" ng-required = "true" name="name" >
+        <div ng-show="formSubscribe.email.$touched && formSubscribe.email.$invalid" id="invalidOutputEmail">
+              Enter a valid email
+      </div>
+      <input ng-model="subscriberEmail" type="email" placeholder="Email*" ng-required = "true" name="email">      
+      <button ng-click="subscribe()" ng-disabled = "formSubscribe.$invalid" >Subscribe</button>
+    </form>

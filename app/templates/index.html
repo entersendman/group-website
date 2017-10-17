@@ -187,11 +187,19 @@
   <div class="subscribeToOverStudio" id="subscribe-page-1">
     <div class="subscribe">
     <h2>Subscribe to our newsletter</h2>
-    <p ng-show="HasSubscribe">You has successfully subscribed</p>
-    <form>
-      <input ng-model="subscriberName" type="text" placeholder="Name*">
-      <input ng-model="subscriberEmail" type="email" placeholder="Email*">
-      <button ng-click="subscribe()">Subscribe</button>
+
+    <form name="formSubscribe" novalidate>
+        <div id="invalidOutput" >
+          <span  ng-show="formSubscribe.name.$touched && formSubscribe.name.$invalid && HasNotSubscribe">Please, enter a valid name</span>
+          <input ng-model="subscriberName" type="text" placeholder="Name*" ng-required = "true" name="name" >
+        </div>
+      
+        <div id="invalidOutputEmail">
+          <span  ng-show="formSubscribe.email.$touched && formSubscribe.email.$invalid && HasNotSubscribe">Please, enter a valid email</span>
+           <input ng-model="subscriberEmail" type="email" placeholder="Email*" ng-required = "true" name="email">
+      </div>
+           
+      <button ng-click="subscribe()" ng-disabled = "formSubscribe.$invalid" >Subscribe</button>
     </form>
     </div>
 </div>
@@ -209,20 +217,36 @@
     <h1>Request a Proposal</h1>
   <h2>Fill Out Our Form & We’ll be in Touch Shortly</h2>
 
-    <form>
-       
-     <input ng-model="CustomerName" type="text" placeholder="Name*">
-     <input ng-model="CustomerEmail" type="email" placeholder="Email*"> 
-     <input ng-model="CustomerPhone" type="text" placeholder="Phone*">
-     <input ng-model="CustomerLocation" type="text" id="text-location" placeholder="Location"> 
-     <input ng-model="CustomerCompany" type="text" placeholder="Company">
-     <input ng-model="CustomerTypeProject" type="text" id="text-type-of" placeholder="Type of Project*"> 
-     <textarea ng-model="CustomerProjectDetails" placeholder="Project Details"></textarea> 
-     <button ng-click="order()">Submit</button></li>
-     
-    </form>
-    
-  </div>
+<form name="formContact" novalidate>
+<div  id="invalidOutput" >
+      <span  ng-show="formContact.name.$touched && formContact.name.$invalid">Please, enter a valid name</span>
+        <input ng-model="CustomerName" type="text" placeholder="Name*" name="name" ng-required = "true">
+</div> 
+
+<div id="invalidOutputEmail" >
+      <span  ng-show="formContact.email.$touched && formContact.email.$invalid ">Please, enter a valid email
+      </span>
+      <input ng-model="CustomerEmail" type="email" placeholder="Email*" name="email" ng-required = "true"> 
+</div>
+<div id="invalidOutput" >
+      <span  ng-show="formContact.Phone.$touched && formContact.Phone.$invalid ">Please, enter a valid phone</span>
+      <input ng-model="CustomerPhone" type="text" placeholder="Phone*" name="Phone" ng-required = "true">
+</div> 
+<input ng-model="CustomerLocation" type="text" id="text-location" placeholder="Location"> 
+
+<input ng-model="CustomerCompany" type="text" placeholder="Company" id="contact-company">
+
+<div  id="invalidOutputEmail" >
+      <span  ng-show="formContact.typeOfProject.$touched && formContact.typeOfProject.$invalid">Please, enter a type of project
+      </span>
+      <input ng-model="CustomerTypeProject" type="text"  placeholder="Type of Project*" name="typeOfProject" ng-required = "true"> </div> 
+
+<textarea ng-model="CustomerProjectDetails" placeholder="Project Details"></textarea> 
+<button ng-disabled = "formContact.$invalid" ng-click="order()">Submit</button></li>
+
+</form>
+
+</div>
 
 
 
